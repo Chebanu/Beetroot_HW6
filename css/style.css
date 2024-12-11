@@ -1,0 +1,202 @@
+/* 
+body      - селектор по тегу        1
+.header    -  селектор по класу     10
+#about_me   - селектор по ID        100
+*/
+
+@import url('./_normalize.css');
+
+/* -------- Створення змінних--------- */
+:root {
+    --main-font-size: 18px;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    font-size: var(--main-font-size);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container {
+    width: 1140px;
+    margin: 0 auto;
+}
+
+
+.flex-block {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* aic */
+}
+
+
+.header {
+    padding: 25px 0;
+    text-align: center;
+}
+
+/* #about_me  {
+    text-align: center;
+} */
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 0;
+    padding-left: 0;
+    list-style-type: none;
+}
+
+.menu__link {
+    text-decoration: none;
+    color: #828282;
+}
+
+.menu__link:hover {
+    color: #070707;
+}
+
+.nav {
+    position: absolute;
+}
+
+.nav::after {
+    content: '';
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #828282;
+}
+
+.title_1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 50px;
+}
+
+.title_1:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.wrapper-img {
+    width: 100%;
+    height: 388px;
+}
+
+.img {
+    width: 100%;
+}
+
+.about-me {
+    padding: 100px 0;
+    text-align: center;
+    background: #F6F6F6;
+}
+
+.text {
+    max-width: 470px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    line-height: 25px;
+
+}
+
+/* .text_none-border {
+    border-bottom: none;
+} */
+
+p.text:not(:nth-of-type(2)) {
+    border-bottom: 1px solid #000;
+}
+
+section:nth-of-type(2) {
+    background: #919b9e;
+}
+
+section#portfolio~div.container>p:nth-of-type(3) {
+    background: red;
+}
+
+h2.title_2~div {
+    color: yellow;
+}
+
+.buttons {
+    margin-left: auto;
+    gap: 10px;
+}
+
+.buttons__btn {
+    background: #000;
+    color: #fff;
+    border-radius: 18px;
+    padding: 8px 14px;
+    border: none;
+    outline: none;
+}
+
+.buttons__btn:first-of-type {
+    margin-right: 14px;
+}
+
+.form {
+    max-width: 350px;
+    background: linear-gradient(5deg, #61AAA6, #49c8d3e0);
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 1px 5px 13px 4px #426B6D;
+}
+
+.form input,
+.form textarea,
+.form select {
+    width: 100%;
+    padding: 5px 8px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    border: none;
+}
+
+.form label {
+    display: inline-block;
+    margin-bottom: 8px;
+    color: #164052;
+}
+
+.form input[type="radio"],
+.form input[type="checkbox"] {
+    width: 30px;
+}
+
+.form div {
+    margin-bottom: 20px;
+}
+
+.button[type='submit'] {
+    width: 200px;
+    padding: 6px 14px;
+    background: #D2ECE9;
+    border: none;
+    border-radius: 8px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: all 0.25s linear;
+}
+
+.button[type='submit']:hover {
+    background: #F8FCFB;
+    box-shadow: 0 0 5px 6px #626D73;
+}
+
+.block-btn {
+    text-align: center;
+}
